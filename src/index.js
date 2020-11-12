@@ -1,5 +1,5 @@
 import displayHeader from './modules/header.js';
-//import functionTwo from './childModule2.js'
-//export {functionTwo};
+import displayHome from './modules/home.js';
 
+displayHome();
 displayHeader();

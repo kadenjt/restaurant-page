@@ -1,9 +1,24 @@
 
+const home = () => {
+    const displayTop = () =>  {
+        const container = document.querySelector("#content");
+        const welcome = document.createElement("div");
+        welcome.className = "welcome";
+        //display background image
+        const background = document.createElement("img");
+        background.id = "backgroundImg";
+        background.src="/dist/img/restaurant.jpg";
+        background.alt="Picture of restaurant"
+        //display restaurant name
+        const name = document.createElement("h1");
+        name.id = "displayName";
+        name.textContent = "Kaden's Restaurant"
+        //append elements to the page
+        welcome.appendChild(background);
+        welcome.appendChild(name);
+        container.appendChild(welcome);
+    }
+    return {displayTop}
+}
 
-
-
-
-/* <div class="welcome">
-    <img src="/dist/img/restaurant.jpg" alt="Picture of restaurant" style="width:100vw">
-    <h1  id="displayName">Kaden's Restaurant</h1>
-</div> */
+export default home().displayTop;
