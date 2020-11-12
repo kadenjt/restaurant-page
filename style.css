@@ -3,6 +3,7 @@ body, html {
 }
 
 .header {
+    z-index: 9;
     margin: 7px;
     display: flex;
     gap: 14px;
@@ -28,7 +29,12 @@ body, html {
 }
 
 .welcome {
-    position: relative;
+    position: absolute;
     text-align: center;
     width: 100vw;
+    z-index: -1;
+}
+
+#backgroundImg {
+    width:100vw;
 }
