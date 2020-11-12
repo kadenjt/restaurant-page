@@ -7,7 +7,7 @@ const home = () => {
         //display background image
         const background = document.createElement("img");
         background.id = "backgroundImg";
-        background.src="/dist/img/restaurant.jpg";
+        background.src="./img/restaurant.jpg";
         background.alt="Picture of restaurant"
         //display restaurant name
         const name = document.createElement("h1");
