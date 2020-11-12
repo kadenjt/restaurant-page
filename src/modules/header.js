@@ -1,5 +1,6 @@
 const header = () => {
     const display = () =>  {
+        console.log("T")
         const container = document.querySelector("#content");
         const headBar = document.createElement("div");
         headBar.className = "header";

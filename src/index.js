@@ -1,4 +1,4 @@
-import displayHeader from './header.js';
+import displayHeader from './modules/header.js';
 //import functionTwo from './childModule2.js'
 //export {functionTwo};
 
