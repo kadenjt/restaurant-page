@@ -3,11 +3,11 @@ const menu = () => {
         const container = document.querySelector("#content");
         const menu = document.createElement("div");
         menu.className = "menu";
-        //display restaurant name
+        //display menu items
         const burger = document.createElement("h4");
         burger.className = "menuItem";
         burger.textContent = "Burger"
-        //append elements to the page
+        //append item elements to the page
         menu.appendChild(burger);
         container.appendChild(menu);
     }

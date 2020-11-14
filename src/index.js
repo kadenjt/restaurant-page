@@ -2,9 +2,21 @@ import displayMenu from './modules/menu.js';
 import displayHeader from './modules/header.js';
 import displayHome from './modules/home.js';
 
-displayHeader();
+// Intialize page on page load
+document.addEventListener("DOMContentLoaded", function () {
+    displayHeader();
+    switchToHome();
+    checkForPress();
+});
 
-function home() {
+// Create listeners for the header buttons
+function checkForPress() {
+    const tabs = Array.from(document.getElementsByClassName("headerItem"));
+    tabs.forEach(btn => btn.addEventListener("click", switchTab));
+}
+
+function switchToHome() {
+    //check which tab is currently displayed - remove it and display home
     const homeContent = document.querySelector(".welcome");
     const menuContent = document.querySelector(".menu");
     const contactContent = document.querySelector(".contact");
@@ -14,7 +26,8 @@ function home() {
     displayHome();
 }
 
-function menu() {
+function switchToMenu() {
+    //check which tab is currently displayed - remove it and display menu
     const homeContent = document.querySelector(".welcome");
     const menuContent = document.querySelector(".menu");
     const contactContent = document.querySelector(".contact");
@@ -24,21 +37,14 @@ function menu() {
     displayMenu();
 }
 
-home();
-//menu();
-
 function switchTab(e) {
-    const selectedBtn = e.target.id;
-    console.log(selectedBtn);
+    const selectedBtn = e.target.id; //id of the button pressed
     switch (selectedBtn) {
         case "menu":
-            menu();
+            switchToMenu();
             break;
         case "about":
-            home();
+            switchToHome();
             break;
     }
 }
-
-const tabs = Array.from(document.getElementsByClassName("headerItem"));
-tabs.forEach(btn => btn.addEventListener("click", switchTab))
