@@ -1,4 +1,3 @@
-
 const home = () => {
     const displayTop = () =>  {
         const container = document.querySelector("#content");
