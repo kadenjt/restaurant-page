@@ -6,7 +6,7 @@ function switchToHome() {
     //check which tab is currently displayed - remove it and display home
     const homeContent = document.querySelector(".welcome");
     const menuContent = document.querySelector(".menu");
-    const contactContent = document.querySelector(".contact");
+    const contactContent = document.querySelector(".contactUs");
     if (homeContent) return;
     if (menuContent) menuContent.remove();
     if (contactContent) contactContent.remove();
@@ -17,7 +17,7 @@ function switchToMenu() {
     //check which tab is currently displayed - remove it and display menu
     const homeContent = document.querySelector(".welcome");
     const menuContent = document.querySelector(".menu");
-    const contactContent = document.querySelector(".contact");
+    const contactContent = document.querySelector(".contactUs");
     if (menuContent) return;
     if (homeContent) homeContent.remove();
     if (contactContent) contactContent.remove();
@@ -28,7 +28,7 @@ function switchToContact() {
     //check which tab is currently displayed - remove it and display contact
     const homeContent = document.querySelector(".welcome");
     const menuContent = document.querySelector(".menu");
-    const contactContent = document.querySelector(".contact");
+    const contactContent = document.querySelector(".contactUs");
     if (contactContent) return;
     if (menuContent) menuContent.remove();
     if (homeContent) homeContent.remove();
