@@ -9,10 +9,10 @@ const header = () => {
         menu.id = "menu";
         menu.textContent = "Menu"
         //create the about header button
-        const about = document.createElement("div");
-        about.className = "headerItem";
-        about.id = "about";
-        about.textContent = "About"
+        const home = document.createElement("div");
+        home.className = "headerItem";
+        home.id = "home";
+        home.textContent = "Home"
         //create the contact header button
         const contact = document.createElement("div");
         contact.className = "headerItem";
@@ -20,8 +20,8 @@ const header = () => {
         contact.textContent = "Contact"
         //append buttons to headBar and headBar to container
         headBar.appendChild(contact);
-        headBar.insertBefore(about, contact);
-        headBar.insertBefore(menu, about);
+        headBar.insertBefore(menu, contact);
+        headBar.insertBefore(home, menu);
         container.appendChild(headBar);
     }
     return {display}
